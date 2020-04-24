@@ -1,0 +1,97 @@
+@mixin post-counter-style {
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  vertical-align: middle;
+}
+
+@mixin post-icons-style {
+  width: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@mixin post-icons-div($align) {
+  width: 100%;
+  text-align: $align;
+  margin: 0 5px 0;
+  padding-left: 20px;
+  @media only screen and (max-width: 716px) {
+    text-align: center;
+    margin-bottom: 4px;
+  }
+}
+
+@mixin divs_headers($axi-x) {
+  display: flex;
+  justify-content: $axi-x;
+  align-items: center;
+}
+
+@mixin font-social-data {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  margin-right: 40px;
+  color: $font-text;
+  @media only screen and (max-width: 735px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $font-search;
+    font-size: 14px;
+    margin-right: 0px;
+  }
+}
+
+@mixin link-button($name, $url) {
+  @at-root #{&}__#{$name} {
+    $this: &;
+    width: fit-content;
+    margin: 0 20px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      border-top: 1px solid $font-text;
+    }
+
+    &:active #{$this}-text {
+      color: black;
+    }
+
+    &:active #{$this}-img {
+      background-image: url($url);
+      background-size: 12px 12px;
+    }
+
+    &-img {
+      width: 12px;
+      height: 12px;
+    }
+
+    &-text {
+      font-size: 14px;
+      color: $font-search;
+      margin-left: 3px;
+    }
+  }
+}
+
+@mixin element($name) {
+  @at-root #{&}__#{$name} {
+    @content;
+  }
+}
+
+@mixin modifier($name) {
+  @at-root #{&}--#{$name} {
+    @content;
+  }
+}

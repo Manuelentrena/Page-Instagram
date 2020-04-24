@@ -1,0 +1,30 @@
+.social-data {
+  grid-area: a-social;
+  display: flex;
+  align-items: center;
+
+  &__publics {
+    @include font-social-data;
+  }
+
+  &__followers {
+    @include font-social-data;
+  }
+
+  &__followed {
+    @include font-social-data;
+  }
+
+  &__counter {
+    font-weight: bold;
+    @media only screen and (max-width: 735px) {
+      color: $font-text;
+    }
+  }
+
+  @media only screen and (max-width: 735px) {
+    border-top: 1px solid $line;
+    display: flex;
+    justify-content: space-around;
+  }
+}

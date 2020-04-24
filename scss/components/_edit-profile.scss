@@ -1,0 +1,22 @@
+.edit-profile {
+  grid-area: a-edit;
+  background-color: $background;
+  width: 93px;
+  height: 30px;
+  border: 1px solid $line;
+  border-radius: 3px;
+  font-weight: normal;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  color: $font-text;
+  align-self: center;
+  justify-self: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 735px) {
+    width: 100%;
+    margin-right: 30px;
+  }
+}

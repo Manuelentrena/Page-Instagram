@@ -1,0 +1,55 @@
+.header {
+  $this: &;
+  border-bottom: 1px solid $line;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
+  padding: 0 25px;
+
+  &__center {
+    max-width: 935px;
+    height: 54px;
+    margin: 0 auto;
+    padding: 0 54;
+    display: grid;
+    grid-template-columns: 1fr 215px 1fr;
+    align-content: center;
+  }
+  &__logo {
+    margin-top: 7px;
+    @include divs_headers(flex-start);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__search {
+    @include divs_headers(center);
+    @media only screen and (max-width: 600px) {
+      visibility: hidden;
+      position: absolute;
+    }
+  }
+
+  &__nav {
+    @include divs_headers(flex-end);
+    @media only screen and (max-width: 600px) {
+      grid-column: 2 / -1;
+    }
+  }
+
+  &__icons-img {
+    height: 22px;
+    width: 22px;
+    margin-left: 22px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__img-logo {
+    width: 103px;
+    height: 29px;
+  }
+}

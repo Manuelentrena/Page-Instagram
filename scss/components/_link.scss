@@ -1,0 +1,13 @@
+.link {
+  width: 100%;
+
+  &__div {
+    border-top: 1px solid $line;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 53px;
+  }
+  @include link-button(public, "../img/public-black.png");
+  @include link-button(tagged, "../img/tagged-black.png");
+}

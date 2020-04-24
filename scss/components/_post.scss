@@ -1,0 +1,55 @@
+/* Post */
+.post{
+    $this: &;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    &__figure{
+        margin: 0;
+    }
+    &__img{
+        width: 100%;
+        vertical-align: top; /* quitar pequeño margen arriba entre las fotos */
+    }
+    &__overlay{
+        /* estilo */
+        visibility: hidden;
+        background: rgba(0,0,0, .4);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        
+        /*iconos (likes y comments)*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:white;
+        @media only screen and (max-width: 716px) {
+            flex-direction: column;
+        }
+    }
+    &__div-like{
+        @include post-icons-div(end);
+        
+    }
+    &__div-comments{
+        @include post-icons-div(start);
+    }
+    &__like-icon{
+        @include post-icons-style;
+    }
+    &__comment-icon{
+        @include post-icons-style;
+    }
+    &__likes{
+        @include post-counter-style;
+    }
+    &__comments{
+        @include post-counter-style;
+    }
+    &:hover #{$this}__overlay{
+        visibility: visible;    
+    }
+}

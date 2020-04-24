@@ -1,0 +1,14 @@
+/* Arreglos generales de estilo en la página */
+@import 'colors';
+/* Comvertimos las cajas en bordex box */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+/* Quitamos margenes por defecto del body */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $background;
+}

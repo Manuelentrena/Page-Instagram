@@ -1,0 +1,73 @@
+.user {
+  display: grid;
+  grid-template-columns: 34.5% 190px 120px 1fr;
+  grid-template-rows: 33px 66px 80px;
+
+  grid-gap: 0px;
+  grid-template-areas:
+    "a-photo     a-title     a-edit     a-config"
+    "a-photo     a-social    a-social    a-social"
+    "a-photo     a-descp     a-descp     a-descp";
+
+  &__div-photo {
+    grid-area: a-photo;
+  }
+
+  &__photo {
+    width: 150px;
+    height: 150px;
+    margin: 0 15%;
+    display: block;
+    @media only screen and (max-width: 735px) {
+      width: 77px;
+      height: 77px;
+    }
+  }
+
+  &__title-name {
+    grid-area: a-title;
+    font-family: cursive;
+    font-weight: normal;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    color: $font-text;
+    @media only screen and (max-width: 735px) {
+      display: block;
+      align-self: center;
+      justify-self: self-start;
+    }
+  }
+
+  &__description {
+    grid-area: a-descp;
+    line-height: 1.5rem;
+    font-size: 16px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    @media only screen and (max-width: 735px) {
+      font-size: 14px;
+      line-height: 1.1rem;
+      margin-left: 20px;
+      align-self: center;
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 14px;
+    @media only screen and (max-width: 735px) {
+      font-size: 12px;
+    }
+  }
+
+  @media only screen and (max-width: 735px) {
+    grid-template-columns: 120px repeat(5, 1fr);
+    grid-template-rows: 39px 39px 100px 61px;
+    grid-template-areas:
+      "a-photo  a-title   a-title   a-title    a-title    a-title"
+      "a-photo  a-edit    a-edit    a-edit      a-edit      a-edit"
+      "a-descp  a-descp   a-descp   a-descp     a-descp     a-descp"
+      "a-social a-social  a-social  a-social    a-social    a-social";
+  }
+}

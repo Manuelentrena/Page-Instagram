@@ -1,0 +1,14 @@
+.search-input{
+    border: 1px solid $line;
+    border-radius: 3px;
+    background-color: $background;
+    background-image: url("../img/search.png");
+    background-repeat: no-repeat, repeat;
+    background-position: 36% center;
+    background-size: 12px 12px;
+    height: 28px;
+    width: 215px;
+    text-align: center;
+    font-size: 14px;
+    color: $font-search;
+}

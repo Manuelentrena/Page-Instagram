@@ -1,0 +1,20 @@
+.config {
+  grid-area: a-config;
+  background-image: url("../img/config.png");
+  background-size: 24px 24px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  align-self: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 735px) {
+    grid-area: a-title;
+    align-self: center;
+    justify-self: end;
+    margin-top: 5px;
+    margin-right: 15px;
+  }
+}

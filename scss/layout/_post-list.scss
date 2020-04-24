@@ -1,0 +1,12 @@
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0px, 293px));
+  justify-content: center;
+  grid-gap: 30px;
+
+  @media only screen and (max-width: 735px) {
+    grid-gap: 3px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
